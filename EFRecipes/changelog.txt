@@ -80,16 +80,16 @@ On hiatus until Wildcraft Herbs & Spices is updated
 -- pomace wine no longer crashes
 
 
-2.0.0-dev.8
+2.0.0-dev.9
 
 1.22 Update shit (lord have mercy):
 - New fruit added, old fruit models updated?
-- 
+- Do stuff with bamboo shoots? idk
 
+GENERAL:
 - Meathook placements adjusted yet again
 - Yogurt can be added to fruit bars in place of gelatin
 - Pemmican can be placed in stacks
-- Do stuff with bamboo shoots? idk
 - Irontack can be thrown as a rock/used as sling ammo
 - Meal text updated to be more like vanilla
 - Variant groups removed from various foods to reduce bloat
@@ -109,39 +109,45 @@ REBALANCING:
 - Hardtack & pemmican can be added to soup/stews
 - Trail mix changed to work like pemmican; outputs 2 items at 1/2 nutrition
 
-
 BUG FIXES:
 - Primitive survival meat patches corrected for meals (cold pasta specifically)
 - Oven transforms reviewed for all items
-- SAUSAGE ONLY HAS HALF THE EXTRA NUTRIENTS WHEN BOILED??? WHY
-- WHY ARE FRIED BALLS DOING IT TOO????
 - Peanut butter fixed so it gives nutrients when in bowl/bucket
 - Acorn muffin recipe fixed so it stops crashing in handbook
-- Fish gelatin can go into pies - DONE!!!
+- Dried and washed seaweed textures re-added back in (not sure how they vanished) - DONE!!!
 
 NEW FOOD:
 - added meatloaf?
 - added walnut/sunflower butter?
 - Dehydrated yeast added (cook in cooking pot; grind result)
 
-MISC: 
+MISC:
 - Dialogue added to Kitchenware Trader; readjusted code to push text to en.json
 - Food can be put on the ground, I guess?
 - Peanut skin model changed
 - Soybean textures/shapes updated
 - Primitive survival patches reviewed
-- FIX THE FUCKING TRADER SPAWNS!!! STOP SPAWNING IN WATER STOP IT STOP IT STOP ITTTTTTTTTTTTTTTTTT
-- WHYYYYY IS SALAD DRESSING NOT WORKING IN MEALS??????????????????????
 - use the new 'NutritionPropertiesPerLitreInMeal' stuff
 - Healing over time implemented for all items
 - Soulstorm Brew makes you psychedelic now?
 - Items can go into crocks? New labels for everything?
 - Pickled cabbage transform reviewed
 - Aged spirit/cider text and visuals revised and updated
-- Superfuels Resumed compatibility actually works now - DONE!!!
-- Latin American Spanish translation added (thanks to Gloo_57) - DONE!!!
-- Soymilk description updated (thanks to origami79) - DONE!!!
-- French translation updated (thanks to MiahNelah) - DONE!!!
+
+
+
+
+2.0.0-dev.8
+- Lots of little things changed to get Expanded Foods semi-operational on 1.22
+
+BUG FIXES:
+- Fish gelatin can go into pies
+
+MISC: 
+- Superfuels Resumed compatibility actually works now
+- Latin American Spanish translation added (thanks to Gloo_57)
+- Soymilk description updated (thanks to origami79)
+- French translation updated (thanks to MiahNelah)
 
 Whiskey Sunshine updates:
 - Fix outdated patching method to fix modded ingredients being invalid in porridge recipe when EF is installed, removed duplicate vanilla ingredient entries from patches
@@ -156,9 +162,9 @@ Whiskey Sunshine updates:
 - Removed EF olive mash (now returns vanilla olive mash)
 - Fixed bad patches due to vanilla structure changes
 - Added correct side to some trough patches to clean up client-debug logs, other small assorted things
+- Condensed winevinegar barrel recipes and change amount per recipe to match juice to wine recipe (0.01L instead of 0.1L)
 - Spoil timers rebalanced around vanilla default balancing of 9-day months
 - Candied fruit standardized to last 30 days
-- Condensed winevinegar barrel recipes and change amount per recipe to match juice to wine recipe (0.01L instead of 0.1L)
 
 
 2.0.0-dev.7
