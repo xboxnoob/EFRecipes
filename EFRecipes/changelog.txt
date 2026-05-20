@@ -81,6 +81,11 @@ On hiatus until Wildcraft Herbs & Spices is updated
 
 
 2.0.0-dev.8
+
+1.22 Update shit (lord have mercy):
+- New fruit added, old fruit models updated?
+- 
+
 - Meathook placements adjusted yet again
 - Yogurt can be added to fruit bars in place of gelatin
 - Pemmican can be placed in stacks
