@@ -1,5 +1,8 @@
 ﻿{
 	"code": "candiedfruit",
+    "behaviors": [
+      { "name": "GroundStorable", "properties": { "layout": "messy12", "collisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.125, "z2": 1 } } }
+    ],
 	"maxstacksize": 64,
 	"attributes": {
 		"displaycaseable": true,
@@ -8,13 +11,62 @@
           "groupBy": [ "candiedfruit-*" ],
           "extraSections": [{ "title": "expandedfoods:item-handbooktitle-candiedfruit", "text": "expandedfoods:item-handbooktext-candiedfruit" }]
         },
-		"onDisplayTransformByType": {
-			"*": { 
-				"translation": { "x": 0.0, "y": -0.155, "z": 0.0 },
-				"scale": 0.67
-			}
-		}
-	},
+        "displayable": {
+          "shelf": { "size": { "width": 4, "height": 4, "length": 4 } }
+        },
+        "onDisplayTransformByType": {
+          "@*-(redcurrant|whitecurrant|blackcurrant|blueberry|cranberry)": {
+            "translation": { "x": 0.0, "y": -0.075, "z": 0.05 },
+            "scale": 0.8
+          },
+          "*-breadfruit": {
+            "translation": { "x": 0.0, "y": -0.1, "z": -0.05 },
+            "rotation": { "x": 0, "y": 45, "z": 0 },
+            "scale": 0.8
+          },
+          "*-saguaro": {
+            "translation": { "x": 0, "y": -0.15, "z": 0 },
+            "scale": 0.7
+          },
+          "*-pomegranate": {
+            "translation": { "x": 0.0, "y": -0.15, "z": 0.05 },
+            "rotation": { "x": 0, "y": -45, "z": 0 },
+            "scale": 0.7
+          },
+          "*-lychee": {
+            "translation": { "x": 0.0, "y": -0.175, "z": 0.0 },
+            "scale": 0.65
+          },
+          "*-mango": {
+            "rotation": { "x": 0, "y": 45, "z": 0 },
+            "translation": { "x": 0.0, "y": -0.11, "z": 0.0 },
+            "scale": 0.8
+          },
+          "*-pineapple": {
+            "translation": { "x": 0.0, "y": -0.15, "z": 0.0 },
+            "scale": 0.7
+          },
+          "*-cherry": {
+            "translation": { "x": 0.0, "y": -0.1, "z": 0.05 },
+            "rotation": { "x": 0, "y": 45, "z": 0 },
+            "scale": 0.8
+          },
+          "candiedfruit-*": {
+            "translation": { "x": 0.0, "y": -0.1, "z": 0.05 },
+            "scale": 0.8
+          }
+        },
+        "groundStorageTransformByType": {
+          "@*(apple|-peach|-pear|-orange|-mango|-pomegranate|-breadfruit|-saguaro|guava)": {
+            "origin": { "x": 0.5, "y": -0, "z": 0.5 },
+            "scale": 0.35
+          },
+          "candiedfruit-*": {
+            "origin": { "x": 0.5, "y": -0, "z": 0.5 },
+            "scale": 0.45
+          }
+        }
+    },
 	"variantgroups": [
 		{ "code": "fruit",  "loadFromProperties": "block/fruit", "states": ["apple"] }
 	],
@@ -40,9 +92,10 @@
 	}],
 	"guiTransformByType": {
 		"*-pomegranate": {
-			"rotation": { "x": 180, "y": -86, "z": 36 },
-			"origin": { "x": 0.5, "y": 0.1, "z": 0.5 },
-			"scale": 2
+            "translation": { "x": 3, "y": 0, "z": 0 },
+            "rotation": { "x": 180, "y": -86, "z": 36 },
+            "origin": { "x": 0.5, "y": 0.1, "z": 0.5 },
+            "scale": 1.7
 		},
 		"*-lychee": {
 			"rotation": { "x": 151, "y": 31, "z": -14 },
@@ -52,7 +105,7 @@
 		"*-breadfruit": {
 			"rotation": { "x": 172, "y": -63, "z": 33 },
 			"origin": { "x": 0.5, "y": 0.1, "z": 0.55 },
-			"scale": 2.25
+			"scale": 1.75
 		},
 		"*-pineapple": {
 			"translation": { "x": 2, "y": 3, "z": 0 },
@@ -60,41 +113,39 @@
 			"origin": { "x": 0.55, "y": 0.05, "z": 0.5 },
 			"scale": 2
 		},
+        "*-saguaro": {
+            "translation": { "x": 3, "y": 0, "z": 0 },
+            "rotation": { "x": -59, "y": -112, "z": 180 },
+            "origin": { "x": 0.5, "y": 0.1, "z": 0.5 },
+            "scale": 1.75
+        },
 		"*-blueberry": {
 			"translation": { "x": 0, "y": 0, "z": 0 },
 			"rotation": { "x": 128, "y": 33, "z": 14 },
 			"origin": { "x": 0.5, "y": 0.0, "z": 0.6 },
-			"scale": 2.6
+			"scale": 2.5
 		},
 		"@*-(redcurrant|whitecurrant|blackcurrant)": {
-			"translation": { "x": 0, "y": 0, "z": 0 },
-			"rotation": { "x": 83, "y": -103, "z": -55 },
-			"origin": { "x": 0.53, "y": 0.05, "z": 0.53 },
-			"scale": 2.6
+            "translation": { "x": 3, "y": 1, "z": 0 },
+            "rotation": { "x": 63, "y": -103, "z": -55 },
+            "origin": { "x": 0.5, "y": 0.1, "z": 0.5 },
+            "scale": 2.2
 		},
 		"*-cranberry": {
-			"translation": { "x": -3, "y": 0, "z": 0 },
-			"rotation": { "x": 134, "y": -39, "z": 18 },
-			"origin": { "x": 0.5, "y": 0, "z": 0.6 },
-			"scale": 2.6
+            "rotation": { "x": 128, "y": -17, "z": 16 },
+            "origin": { "x": 0.5, "y": 0, "z": 0.6 },
+            "scale": 2.0
 		},
-		"*-saguaro": {
-			"translation": { "x": 3, "y": 0, "z": 0 },
-			"rotation": { "x": -59, "y": -112, "z": 180 },
-			"origin": { "x": 0.5, "y": 0.1, "z": 0.5 },
-			"scale": 2
-		},
-		"@*(-apple|-cherry|-orange)": {
-			"translation": { "x": 0, "y": 3, "z": 0 },
-			"rotation": { "x": 171, "y": -63, "z": 33 },
-			"origin": { "x": 0.5, "y": 0, "z": 0.5 },
-			"scale": 2.6
+		"@*(-apple|-orange)": {
+            "translation": { "x": 2, "y": 0, "z": 0 },
+            "rotation": { "x": 171, "y": -63, "z": 33 },
+            "origin": { "x": 0.5, "y": 0.1, "z": 0.5 },
+            "scale": 2.0
 		},
 		"*-mango": {
-			"translation": { "x": 3, "y": 3, "z": 0 },
-			"rotation": { "x": 171, "y": -63, "z": 33 },
-			"origin": { "x": 0.5, "y": 0, "z": 0.5 },
-			"scale": 2.5
+            "rotation": { "x": 171, "y": -63, "z": 33 },
+            "origin": { "x": 0.5, "y": 0.1, "z": 0.5 },
+            "scale": 2
 		},
 		"*-cherry": {
 			"translation": { "x": 2, "y": 6, "z": 0 },
@@ -102,117 +153,121 @@
 			"origin": { "x": 0.5, "y": 0, "z": 0.5 },
 			"scale": 2.6
 		},
-		"*-peach": {
-			"translation": { "x": 3, "y": 3, "z": 0 },
-			"rotation": { "x": 171, "y": -63, "z": 33 },
-			"origin": { "x": 0.5, "y": 0, "z": 0.5 },
-			"scale": 2.6
-		},
-		"*-pear": {
-			"translation": { "x": 0, "y": 0, "z": 0 },
-			"rotation": { "x": 171, "y": -63, "z": 33 },
-			"origin": { "x": 0.5, "y": 0.05, "z": 0.55 },
-			"scale": 2.6
+		"@*-(peach|pear)": {
+            "translation": { "x": 1, "y": 0, "z": 0 },
+            "rotation": { "x": 171, "y": -63, "z": 33 },
+            "origin": { "x": 0.5, "y": 0.1, "z": 0.5 },
+            "scale": 2.0
 		}
 	},
 	"tpHandTransformByType": {
 		"*-pomegranate": {
-			"translation": { "x": -1.28, "y": -0.2, "z": -1.24 },
-			"rotation": { "x": -137, "y": -62, "z": -14 },
-			"origin": { "x": 0.5, "y": 0, "z": 0.5 },
-			"scale": 0.4
+          "translation": { "x": -1.75, "y": 0, "z": -1.3 },
+          "rotation": { "x": 0, "y": 18, "z": -98 },
+          "origin": { "x": 0.5, "y": 0, "z": 0.5 }
 		},
 		"*-lychee": {
-			"translation": { "x": -1.6, "y": -0.43, "z": -1.65 },
-			"rotation": { "x": 103, "y": -90, "z": 78 },
-			"origin": { "x": 0.7, "y": 0.1, "z": 0.7 },
-			"scale": 0.38
+          "translation": { "x": -1.8, "y": -0.3, "z": -1.25 },
+          "rotation": { "x": 0, "y": 24, "z": -90 },
+          "origin": { "x": 0.5, "y": 0.1, "z": 0.5 }
 		},
 		"*-breadfruit": {
-			"translation": { "x": -1.75, "y": -0.43, "z": -1.51 },
-			"rotation": { "x": 40, "y": 3, "z": -180 },
-			"origin": { "x": 0.8, "y": 0.1, "z": 0.6 },
-			"scale": 0.42
+          "translation": { "x": -1.75, "y": -0.33, "z": -1.2 },
+          "rotation": { "x": 2, "y": 3, "z": -90 },
+          "origin": { "x": 0.5, "y": 0.1, "z": 0.5 }
 		},
 		"*-pineapple": {
-			"translation": { "x": -1.25, "y": -0.6, "z": -1.3 },
-			"rotation": { "x": -136, "y": 0, "z": -25 },
-			"origin": { "x": 0.5, "y": 0.1, "z": 0.5 },
-			"scale": 0.4
+          "translation": { "x": -1.98, "y": -0.99, "z": -1.22 },
+          "rotation": { "x": 2, "y": 1, "z": -87 },
+          "scale": 0.4
 		},
 		"*-saguaro": {
-			"translation": { "x": -1.3, "y": -1.2, "z": -1.4 },
-			"rotation": { "x": -142, "y": 0, "z": -11 },
-			"origin": { "x": 0.5, "y": 0.3, "z": 0.5 },
-			"scale": 0.4
+          "translation": { "x": -1.8, "y": -0.2, "z": -1.3 },
+          "rotation": { "x": 3, "y": 9, "z": -90 },
+          "origin": { "x": 0.5, "y": 0.1, "z": 0.5 }
 		},
 		"*-blueberry": {
-			"translation": { "x": -1.5, "y": -1.85, "z": -1.5 },
-			"rotation": { "x": -2, "y": -57, "z": -140 },
-			"scale": 0.4
+          "translation": { "x": -1.85, "y": -0.2, "z": -1.2 },
+          "rotation": { "x": -2, "y": 11, "z": -91 },
+          "origin": { "x": 0.5, "y": 0.1, "z": 0.5 }
 		},
+        "*-cherry": {
+          "translation": { "x": -1.87, "y": -0.25, "z": -1.24 },
+          "rotation": { "x": 0, "y": 14, "z": -90 },
+          "origin": { "x": 0.5, "y": 0.1, "z": 0.5 }
+        },
+        "*-orange": {
+          "translation": { "x": -1.85, "y": -0.25, "z": -1.24 },
+          "rotation": { "x": 0, "y": 14, "z": -90 },
+          "origin": { "x": 0.5, "y": 0.1, "z": 0.5 }
+        },
 		"@*-(cranberry|redcurrant|whitecurrant|blackcurrant)": {
-			"translation": { "x": -1.5, "y": -1.75, "z": -1.5 },
-			"rotation": { "x": 180, "y": -124, "z": 54 },
-			"scale": 0.4
+          "translation": { "x": -1.8, "y": -0.2, "z": -1.25 },
+          "rotation": { "x": -1, "y": 7, "z": -90 },
+          "origin": { "x": 0.5, "y": 0.1, "z": 0.5 }
 		},
-		"@*(-apple|-cherry|-peach|-pear|-orange|-mango)": {
-			"translation": { "x": -1.18, "y": -1.17, "z": -1.04 },
-			"rotation": { "x": 36, "y": -62, "z": 10 },
-			"scale": 0.4
+		"@*(-apple|-cherry|-peach|-pear|-mango)": {
+          "translation": { "x": -1.9, "y": -0.3, "z": -1.34 },
+          "rotation": { "x": 0, "y": 14, "z": -90 },
+          "origin": { "x": 0.5, "y": 0.1, "z": 0.5 }
 		}
 	},
 	"groundTransformByType": {
 		"*-pomegranate": {
-			"translation": { "x": 0, "y": 0.07, "z": 0 },
-			"rotation": { "x": 90, "y": 0, "z": 0 },
-			"origin": { "x": 0.5, "y": 0.5, "z": 0.53 },
-			"scale": 1.8
+            "translation": { "x": 0, "y": 0.2, "z": 0 },
+            "rotation": { "x": 0, "y": 0, "z": 0 },
+            "scale": 1.6
 		},
 		"*-lychee": {
 			"translation": { "x": 0, "y": 0, "z": 0 },
 			"rotation": { "x": 0, "y": 0, "z": -3 },
 			"origin": { "x": 0.47, "y": 0, "z": 0.5 },
-			"scale": 3.5
+			"scale": 2.2
 		},
-		"*-breadfruit": {
+		"@*-(breadfruit|peach|pear)": {
 			"translation": { "x": 0, "y": 0, "z": 0 },
-			"rotation": { "x": 0, "y": 0, "z": -3 },
+			"rotation": { "x": 0, "y": 0, "z": 0 },
 			"origin": { "x": 0.5, "y": 0, "z": 0.5 },
-			"scale": 2.3
+			"scale": 2
 		},
 		"*-pineapple": {
 			"translation": { "x": 0, "y": 0, "z": 0 },
 			"rotation": { "x": 0, "y": 0, "z": -3 },
 			"origin": { "x": 0.47, "y": 0, "z": 0.5 },
-			"scale": 2.35
+			"scale": 2
 		},
 		"*-saguaro": {
 			"translation": { "x": 0, "y": 0, "z": 0 },
 			"rotation": { "x": 0, "y": 0, "z": 0 },
 			"origin": { "x": 0.5, "y": 0, "z": 0.5 },
-			"scale": 2.3
+			"scale": 1.8
 		},
-		"@*-(apple|cherry|peach|pear|orange|mango)": {
-			"translation": { "x": 0, "y": 0, "z": 0 },
+		"@*-(apple|cherry|orange|mango)": {
+			"translation": { "x": 0, "y": 0.03, "z": 0 },
 			"rotation": { "x": 0, "y": 0, "z": 0 },
 			"origin": { "x": 0.5, "y": 0, "z": 0.5 },
-			"scale": 3.4
+			"scale": 2.2
 		},
-		"@*-(redcurrant|whitecurrant|blackcurrant|breadfruit)": {
+		"@*-(orange|redcurrant|whitecurrant|blackcurrant|breadfruit)": {
 			"translation": { "x": 0, "y": 0.05, "z": 0 },
 			"rotation": { "x": 0, "y": 0, "z": 0 },
 			"origin": { "x": 0.5, "y": 0, "z": 0.5 },
-			"scale": 2.3
+			"scale": 2
 		},
 		"@*-(blueberry|cranberry)": {
-			"translation": { "x": 0, "y": 0.05, "z": 0 },
+			"translation": { "x": 0, "y": 0.03, "z": 0 },
 			"rotation": { "x": 0, "y": 0, "z": 0 },
 			"origin": { "x": 0.5, "y": 0, "z": 0.5 },
 			"scale": 2.3
 		},
 		"candiedfruit-*": { 
-			"scale": 2.3
+			"scale": 2.2
 		}
-	}
+	},
+    "heldRightReadyAnimationByType": {
+      "@*(blueberry|cranberry|redcurrant|whitecurrant|blackcurrant|cherry|lychee|beautyberry|blackberry|cactusfruit|cloudberry|gooseberry|plumnatal|raspberry|strawberry|kumquat)": "holdbothhands"
+    },
+    "heldTpIdleAnimationByType": {
+      "@*(blueberry|cranberry|redcurrant|whitecurrant|blackcurrant|cherry|lychee|beautyberry|blackberry|cactusfruit|cloudberry|gooseberry|plumnatal|raspberry|strawberry|kumquat)": "holdbothhands"
+    }
 }
