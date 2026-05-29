@@ -33,8 +33,6 @@ Gelatin-making process more complicated
 RenderIngredients now uses selectiveElements to cut down on files
 Soulstorm brew integrated with Alchemy
 Instead of simply 'cooking' certain liquids (such as sap > syrup or water > salt) , they are now actual simmer recipes 
-Soy milk can be used to make tofu
-Soy milk can be used to make cheese
 Cheese bread added (cheese is part of dough-making process)
 Pemmican can be added to soup/stew?
 Butchering compatibility added
@@ -47,14 +45,10 @@ Patreon suggestions:
 - Fruit Leather (fruit mash and fruit syrup mixed into a paste then baked in oven)
 - Flower Bread (like fruit bread, but with flowers. Mainly aesthetic, but maybe different flowers can add buffs? I.E. catmint = temporary health regen, woad = temporary improved movement speed, etc.)
 - Cake (flour, milk, egg, salt, flavorings (optional but can range; flowers, herbs, fruit, honey, etc.) (Can be cut like cheese wheels or pies)
-- Cheesecake (regular pie crust, cottage cheese or regular cheese filling)
-- Hard Tack (flour, bread crumbs, water. Lasts forEVER. Not literally, but sailors used it for nutrition when at sea. so I think it'd be cool to add.)
 - Honeyed Wine (Wine mixed with honey. That's it. Adds extra nutrition or can be a buff of some sort.)
 - Creme Brulee (Milk [or if the below ideas are considered, heavy cream], egg yolks, honey, salt) (all mixed together in a mixing bowl into smaller bowl/s, then baked in the oven.)
 - Cookies (Seriously, how do we not have these yet?) (Honey, flour, milk/soymilk/water, berries/carrots)
-- Butter that can be churned in a butter churn after milking an animal
 - Can use the buttermilk leftover from making the actual butter in place of milk in recipes
-- Milk that can be made into heavy cream
 
 Vityuri suggestions:
 - Pickled and cooked vegetable for required ingredients in soup. Many cuisines have preserved pickled vegetable in soup. Like sichuan fish soup with pickled mustard greens, polish pickle soup.
@@ -83,15 +77,26 @@ On hiatus until Wildcraft Herbs & Spices is updated
 2.0.0-dev.9
 
 1.22 Update shit (lord have mercy):
-- New fruit added, old fruit models updated?
+- New fruit added for:
+-- Dehydrated fruit - DONE!!!
+-- Dried fruit - DONE!!!
+-- Candied fruit
+-- Barrel textures
+- Old fruit models still used for GUI via "shapeInventoryByType" (see blocktypes/plant/flower.json)
 - Do stuff with bamboo shoots? idk
+- New mushrooms added
+- Lard / olive oil figured out
+- New language strings added to meals
+- Hardened resin/lard comes out of buckets properly
+- Reviewed cooked veggie perish timers?
+
 
 GENERAL:
 - Meathook placements adjusted yet again
 - Yogurt can be added to fruit bars in place of gelatin
 - Pemmican can be placed in stacks
 - Irontack can be thrown as a rock/used as sling ammo
-- Meal text updated to be more like vanilla
+- Meal text updated to be more like vanilla (mealRecipeByGroup used)
 - Variant groups removed from various foods to reduce bloat
 - Porridge recipe patch streamlined to use proper patch methods
 
@@ -108,6 +113,8 @@ REBALANCING:
 - Compote buffed; requires more ingredients
 - Hardtack & pemmican can be added to soup/stews
 - Trail mix changed to work like pemmican; outputs 2 items at 1/2 nutrition
+- Base nutrition for expanded food items nerfed?
+- All bones can be used for bone broth
 
 BUG FIXES:
 - Primitive survival meat patches corrected for meals (cold pasta specifically)

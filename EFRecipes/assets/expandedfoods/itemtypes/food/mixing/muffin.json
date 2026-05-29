@@ -34,6 +34,7 @@
       		"game:flour-birch" : { "saturation": 45, "foodcategory": "Grain" },
       		"game:flour-pine" : { "saturation": 45, "foodcategory": "Grain" },
       		"game:flour-maple" : { "saturation": 45, "foodcategory": "Grain" },
+            "game:fruit-saguaro" : { "saturation": 90, "health": 1, "foodcategory": "Grain" },
 			"aculinaryartillery:eggyolkfullportion-chicken": { "saturation": 20, "foodcategory": "Protein"},
 			"aculinaryartillery:eggyolkfullportion-pheasant": { "saturation": 28, "foodcategory": "Protein"},
 			"aculinaryartillery:eggyolkfullportion-goldenpheasant": { "saturation": 28, "foodcategory": "Protein"},
